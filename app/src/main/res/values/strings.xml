@@ -1,10 +1,12 @@
 <resources>
-    <string name="app_name">Intent - Tre</string>
-    <string name="txt_move">Move Activity</string>
-    <string name="txt_moveactivity">
+    <string name="strAppName">Intent - Tre</string>
+    <string name="strMove">Move Activity</string>
+    <string name="strMoveWithData">Move Activity With Data</string>
+    <string name="strActivityMove">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum scelerisque mi pellentesque dignissim. Mauris quis ultricies nisi.
         Sed eget sem vitae nisi lobortis eleifend euismod ac ipsum. Curabitur quis leo placerat, ullamcorper lorem eu, iaculis sapien.
         Donec nec venenatis velit, tincidunt volutpat leo. Nullam vel luctus felis, commodo dignissim turpis. Ut gravida tempor justo sit amet volutpat.
         Donec venenatis ex vitae viverra egestas. Etiam ornare diam vel euismod viverra. Cras rutrum auctor libero non
     </string>
+    <string name="strActivityDataMove">Data Received</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.fwahyudianto.learn.intent;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnMoveActivity;
     Button btnMoveActivityData;
     Button btnMoveActivityObject;
+    Button btnDialNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnMoveActivityObject = findViewById(R.id.btn_moveactivityobject);
         btnMoveActivityObject.setOnClickListener(this);
+
+        btnDialNumber = findViewById(R.id.btn_dialnumber);
+        btnDialNumber.setOnClickListener(this);
     }
 
     @Override
@@ -57,6 +62,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(oIntentObject);
 
                 oPerson = null;
+                break;
+            case R.id.btn_dialnumber:
+                String strMobileNumber = "085747117005";
+                Intent oIntentDial = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + strMobileNumber));
+                startActivity(oIntentDial);
                 break;
         }
     }

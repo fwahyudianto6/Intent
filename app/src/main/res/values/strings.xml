@@ -3,6 +3,7 @@
     <string name="strMove">Move Activity</string>
     <string name="strMoveWithData">Move Activity With Data</string>
     <string name="strMoveWithObject">Move Activity With Object</string>
+    <string name="strDialNumber">Dial a Number</string>
     <string name="strActivityMove">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum scelerisque mi pellentesque dignissim. Mauris quis ultricies nisi.
         Sed eget sem vitae nisi lobortis eleifend euismod ac ipsum. Curabitur quis leo placerat, ullamcorper lorem eu, iaculis sapien.

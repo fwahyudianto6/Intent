@@ -9,6 +9,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button btnMoveActivity;
     Button btnMoveActivityData;
+    Button btnMoveActivityObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnMoveActivityData = findViewById(R.id.btn_move_activitydata);
         btnMoveActivityData.setOnClickListener(this);
+
+        btnMoveActivityObject = findViewById(R.id.btn_moveactivityobject);
+        btnMoveActivityObject.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +40,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 oIntentMoveData.putExtra(MoveActivityData.strExtraNik, "3302262511920001");
                 oIntentMoveData.putExtra(MoveActivityData.strExtraAge, 26);
                 startActivity(oIntentMoveData);
+                break;
+            case R.id.btn_moveactivityobject:
+                //  Create New Person (Object) with Value by Parameter
+                Person oPerson = new Person(
+                        "Fajar Wahyudianto",
+                        "fwahyudi06@gmail.com",
+                        "3302262511920001",
+                        26);
+
+                Intent oIntentObject = new Intent(MainActivity.this, MoveActivityObject.class);
+                oIntentObject.putExtra(MoveActivityObject.strExtraName, oPerson.getName());
+                oIntentObject.putExtra(MoveActivityObject.strExtraEmail, oPerson.getEmail());
+                oIntentObject.putExtra(MoveActivityObject.strExtraNik, oPerson.getNik());
+                oIntentObject.putExtra(MoveActivityObject.strExtraAge, oPerson.getAge());
+                startActivity(oIntentObject);
+
+                oPerson = null;
                 break;
         }
     }
